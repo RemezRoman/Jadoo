@@ -924,14 +924,14 @@ body {
 }
 
 .like-content-booking__ongoing {
-  display: flex;
   padding: 18px 30px 22px 20px;
   background-color: white;
   border-radius: 18px;
+  overflow: hidden;
+  visibility: hidden;
   position: absolute;
   top: -135px;
   left: -120px;
-  display: none;
 }
 @media (max-width: 582px) {
   .like-content-booking__ongoing {
@@ -941,7 +941,7 @@ body {
   }
 }
 .like-content-booking__ongoing._active {
-  display: flex;
+  visibility: visible;
 }
 .like-content-booking__image {
   width: 50px;
