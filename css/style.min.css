@@ -1704,6 +1704,12 @@ body {
 .body-footer__logo {
   display: inline-block;
 }
+.body-footer__logo img {
+  transition: all 0.3s ease 0s;
+}
+.body-footer__logo img:hover {
+  transform: scale(1.1);
+}
 .body-footer__logo:not(:last-child) {
   margin-bottom: 19px;
 }
@@ -1766,6 +1772,29 @@ body {
   font-size: 18px;
   line-height: 124.5%;
   color: #5E6282;
+  position: relative;
+}
+.menu-footer__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.5s;
+}
+.menu-footer__link:hover::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: red;
+  transition: width 0.5s;
 }
 
 .social-footer {
